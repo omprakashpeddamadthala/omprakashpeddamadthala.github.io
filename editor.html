@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LaTeX On-the-Fly Editor</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f0f2f5; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+        .container { background-color: #ffffff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); width: 90%; max-width: 800px; }
+        h1 { color: #333; text-align: center; margin-bottom: 20px; font-size: 24px; }
+        textarea {
+            width: calc(100% - 22px); /* Account for padding and border */
+            min-height: 450px;
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 14px;
+            line-height: 1.5;
+            resize: vertical;
+        }
+        .button-group { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; }
+        .button-group button, .button-group a.button {
+            background-color: #007bff; color: white; padding: 12px 18px; border: none; border-radius: 6px;
+            cursor: pointer; text-decoration: none; font-size: 15px; transition: background-color 0.3s ease;
+            margin-right: 10px; margin-bottom: 10px; /* Add margin for spacing when wrapped */
+        }
+        .button-group button:hover, .button-group a.button:hover { background-color: #0056b3; }
+        .button-group a#downloadLink { background-color: #28a745; }
+        .button-group a#downloadLink:hover { background-color: #1e7e34; }
+        .status {
+            margin-top: 20px; padding: 12px; border-radius: 6px; font-size: 14px; text-align: center;
+            display: none; /* Hidden by default */
+        }
+        .status.success { background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+        .status.error { background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+        .status.info { background-color: #e2e3e5; color: #383d41; border: 1px solid #d6d8db; }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .button-group { flex-direction: column; }
+            .button-group button, .button-group a.button { width: 100%; margin-right: 0; }
+            .container { padding: 20px; }
+            textarea { min-height: 300px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>LaTeX Resume Editor</h1>
+
+        <textarea id="latexContent" spellcheck="false">{{ latex_content | safe }}</textarea>
+
+        <div class="button-group">
+            <button onclick="saveTex()">Save Changes</button>
+            <button onclick="compileTex()">Compile to PDF</button>
+            <a href="/download" id="downloadLink" class="button" style="display:none;">Download PDF</a>
+        </div>
+
+        <div id="statusMessage" class="status"></div>
+    </div>
+
+    <script>
+        const latexContentEl = document.getElementById('latexContent');
+        const statusMessageEl = document.getElementById('statusMessage');
+        const downloadLinkEl = document.getElementById('downloadLink');
+
+        // Function to show status messages
+        function showStatus(message, type = 'info') {
+            statusMessageEl.textContent = message;
+            statusMessageEl.className = 'status ' + type; // Reset classes and add new type
+            statusMessageEl.style.display = 'block';
+        }
+
+        // Function to hide status messages
+        function hideStatus() {
+            statusMessageEl.style.display = 'none';
+        }
+
+        // The initial LaTeX content is injected by Flask's render_template_string:
+        // {{ latex_content | safe }} in the textarea.
+
+        async function saveTex() {
+            hideStatus();
+            const content = latexContentEl.value;
+            showStatus('Saving...', 'info');
+            try {
+                const response = await fetch('/edit', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ latex_content: content })
+                });
+                const result = await response.json();
+                if (response.ok) {
+                    showStatus(result.message || 'Content saved successfully!', 'success');
+                } else {
+                    showStatus(result.error || 'Failed to save content.', 'error');
+                }
+            } catch (error) {
+                showStatus('Error saving content: ' + error.message, 'error');
+            }
+        }
+
+        async function compileTex() {
+            hideStatus();
+            showStatus('Compiling... please wait.', 'info');
+            downloadLinkEl.style.display = 'none'; // Hide download link during compilation
+
+            try {
+                const response = await fetch('/compile', { method: 'POST' });
+                const result = await response.json();
+                if (response.ok) {
+                    showStatus(result.message || 'Compilation successful! PDF is ready for download.', 'success');
+                    downloadLinkEl.style.display = 'inline-block'; // Show download link
+                } else {
+                    let errorMsg = result.error || 'Compilation failed.';
+                    if (result.api_response) {
+                        errorMsg += ` (API: ${result.api_response.substring(0, 200)}...)`;
+                    }
+                    showStatus(errorMsg, 'error');
+                }
+            } catch (error) {
+                showStatus('Error during compilation: ' + error.message, 'error');
+            }
+        }
+    </script>
+</body>
+</html>
