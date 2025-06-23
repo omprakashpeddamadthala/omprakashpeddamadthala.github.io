@@ -1,0 +1,193 @@
+%-------------------------
+% Resume in Latex
+% Author: Vaishanth (modified for two-page layout with projects)
+% License: MIT
+%------------------------
+
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+\RequirePackage{tikz}
+\RequirePackage{xcolor}
+
+\definecolor{cvblue}{HTML}{0E5484}
+\definecolor{black}{HTML}{130810}
+\definecolor{darkcolor}{HTML}{0F4539}
+\definecolor{cvgreen}{HTML}{3BD80D}
+\colorlet{name}{black}
+\colorlet{heading}{darkcolor}
+\colorlet{headingrule}{cvblue}
+\colorlet{accent}{darkcolor}
+\colorlet{emphasis}{black}
+\colorlet{body}{black}
+
+%----------FONT OPTIONS----------
+\usepackage{charter}
+\usepackage[scaled=.95]{helvet} % For sans-serif headings
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.7in}
+\addtolength{\evensidemargin}{-0.7in}
+\addtolength{\textwidth}{1.4in}
+\addtolength{\topmargin}{-0.8in}
+\addtolength{\textheight}{1.6in}
+\urlstyle{same}
+
+\definecolor{airforceblue}{rgb}{0.36, 0.54, 0.66}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-3pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-4pt}]
+
+% Ensure PDF is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-1pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeProjectItem}[2]{
+  \item\small{
+    \textbf{#1:} #2 \vspace{-1pt}
+  }
+}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.1in, itemsep=1pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-3pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+%-------------------------------------------%
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    {\LARGE Om Prakash Peddamadthala} \\
+    \vspace{2pt}
+    \small
+    {+91 98481 49507} $\cdot$
+    \href{[url to portfolio]}{\color{blue}{Portfolio}} $\cdot$
+    \href{mailto:omprakashornold@gmail.com}{\color{blue}{omprakashornold@gmail.com}} $\cdot$
+    \href{https://www.linkedin.com/in/omprakash-peddamadthala/}{\color{blue}{linkedin.com/in/omprakash-peddamadthala}} $\cdot$
+    \href{https://github.com/omprakashpeddamadthala}{\color{blue}{github.com/omprakashpeddamadthala}} \\
+    \vspace{-5pt}
+\end{center}
+
+%-----------SUMMARY-----------
+\section{\color{airforceblue}Professional Summary}
+\resumeItemListStart
+\resumeItem{Software Engineer with 5+ years of experience in designing and developing robust solutions using Java, Spring Boot, and Microservices.}
+\resumeItem{Skilled in building scalable systems, focusing on real-time data processing, API development, and third-party integrations.}
+\resumeItem{Proficient in CI/CD pipelines, Docker, Jenkins, SonarQube, and JIRA for system management and quality assurance.}
+\resumeItem{Collaborates effectively with cross-functional teams to deliver high-quality solutions aligned with business goals.}
+\resumeItemListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{\color{airforceblue}Technical Skills}
+\begin{itemize}[leftmargin=0in, label={}]
+    \small{\item{
+      \textbf{Languages:} Java, Groovy, SQL \\
+      \textbf{Frameworks:} Spring, Spring Boot, Grails, Hibernate, JPA \\
+      \textbf{Build Tools:} Maven, Gradle \\
+      \textbf{IDE:} IntelliJ IDEA, Visual Studio Code, Jasper Studio \\
+      \textbf{Web Technologies:} HTML, CSS, JavaScript, jQuery, React (Basics) \\
+      \textbf{Databases:} MySQL, PostgreSQL \\
+      \textbf{OS:} Windows 11, Unix, Linux \\
+      \textbf{Tools:} AWS, SonarQube, Jenkins, Git, JIRA, Docker, Postman, Swagger \\
+    }}
+\end{itemize}
+
+%-----------WORK EXPERIENCE-----------
+\section{\color{airforceblue}Work Experience}
+\resumeSubHeadingListStart
+\resumeSubheading
+{Software Engineer}{Hyderabad, Telangana}
+{Computer Generated Solutions Pvt Ltd}{Aug 2023 - Present}
+\resumeItemListStart
+\resumeItem{Developed Threadvine B2B ecommerce platform, enhancing digital catalog management and real-time inventory tracking using Spring Boot.}
+\resumeItem{Integrated SendGrid API for email management, streamlining communication and tracking email logs.}
+\resumeItem{Implemented order management logic and complex business rules for order placement.}
+\resumeItem{Introduced AOP for user activity tracking, improving system monitoring without codebase changes.}
+\resumeItem{Fixed bugs and developed features based on client needs, ensuring timely delivery.}
+\resumeItem{Collaborated on feature design to enhance performance and user experience.}
+\resumeItemListEnd
+
+\resumeSubheading
+{Software Developer}{Chennai, Tamilnadu}
+{Platform 3 Technologies Pvt Ltd}{Aug 2022 - July 2023}
+\resumeItemListStart
+\resumeItem{Designed services for data extraction in Archon ETL platform, migrating and archiving data from DB2 to EDB and PostgreSQL.}
+\resumeItem{Integrated OpenText API to automate Excel file uploads, ensuring smooth data transformation and migration.}
+\resumeItem{Collaborated on backend processes to support UI requirements, ensuring seamless data flow.}
+\resumeItem{Prepared product documentation and developed JUnit test cases for robust backend services.}
+\resumeItem{Deployed builds in Linux environments using Docker for reliable deployments.}
+\resumeItemListEnd
+
+\resumeSubheading
+{Jr. Java Developer}{Hyderabad, Telangana}
+{Aldrich Research Services Pvt Ltd}{Dec 2019 - July 2022}
+\resumeItemListStart
+\resumeItem{Developed web crawlers using JSOUP to extract and parse data, improving data collection efficiency.}
+\resumeItem{Built RESTful web services with Spring Boot for interaction with external systems.}
+\resumeItem{Integrated API responses and parsing for accurate data extraction and presentation.}
+\resumeItem{Managed MySQL and MongoDB databases, optimizing queries for faster retrieval.}
+\resumeItem{Developed POJOs and persistence layers using Hibernate, and contributed to Spring MVC views.}
+\resumeItem{Implemented Log4J for logging and error tracking across systems.}
+\resumeItem{Participated in daily scrum meetings to resolve issues and meet project deadlines.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section{\color{airforceblue}Education}
+\resumeSubHeadingListStart
+\resumeSubheading
+{Bachelor of Computer Science and Engineering}{Hyderabad, Telangana}
+{St. Mary's Group of Institutions}{Aug 2014 - July 2018}
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{\color{airforceblue}Projects}
+\resumeItemListStart
+\resumeProjectItem{Event Ticket Booking Platform}{Developed a web application using Spring Boot and PostgreSQL for booking event tickets, featuring user authentication and payment integration.}
+\resumeProjectItem{Ecommerce Application}{Built a B2C ecommerce platform with Spring Boot, Hibernate, and PostgreSQL, supporting product catalog and order processing.}
+\resumeProjectItem{Blog Application}{Created a blogging platform using Grails and MySQL, enabling users to publish and manage posts with a responsive UI.}
+\resumeItemListEnd
+
+\end{document}
