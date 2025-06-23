@@ -3,114 +3,188 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Om Prakash Peddamadthala - Software Developer</title>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📄</text></svg>">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Om Prakash Peddamadthala - Software Engineer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body class="bg-gray-100 text-gray-800 font-sans">
-    <div class="container max-w-6xl mx-auto p-6 sm:p-8 md:p-10">
-        <!-- Header: Name, Title, Contact Info -->
-        <header class="bg-white rounded-lg shadow-md mb-8 p-4 sm:p-6 flex flex-col md:flex-row justify-between items-center md:items-start">
-            <div class="flex flex-col sm:flex-row items-center text-center sm:text-left"> <!-- Ensure this group is centered on xtra-small screens and then aligns left -->
-                <img src="https://via.placeholder.com/100" alt="Om Prakash Peddamadthala" class="w-32 h-32 rounded-full mr-0 sm:mr-8 mb-4 sm:mb-0 border-2 border-indigo-600 shadow-sm">
-                <div>
-                    <h1 class="text-3xl sm:text-4xl font-bold text-indigo-700 tracking-tight">Om Prakash Peddamadthala</h1>
-                    <h2 class="text-xl sm:text-2xl text-gray-600">Software Developer</h2>
-                </div>
-            </div>
-            <div class="text-center sm:text-right mt-4 md:mt-0">
-                <p class="text-sm text-gray-500">Email: Omprakashornold@gmail.com</p>
-                <p class="text-sm text-gray-500">Phone: +91-98481 49507</p>
-                <a href="portfolio.html" class="mt-2 inline-block text-sm text-indigo-600 hover:text-indigo-800 font-semibold">View New Detailed Portfolio</a>
-            </div>
-        </header>
+<body>
+    <header>
+        <nav class="container">
+            <a href="#hero" class="logo">Om Prakash Peddamadthala</a>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <!-- Professional Summary -->
-        <section id="summary" class="bg-white rounded-lg shadow-md mb-8 p-4 sm:p-6">
-            <h2 class="text-2xl font-semibold text-indigo-700 mb-4 pb-2 border-b border-gray-200">PROFESSIONAL SUMMARY</h2>
-            <p class="text-gray-700 leading-relaxed">Senior Software Developer with 5+ years of experience in Analysis, Design, Development and Implementation. Expertise in Spring Boot, Microservices, Java Frameworks (ORM, Hibernate, Spring). Proficient in RESTful web services and API development. Strong experience with Docker, Jenkins for CI/CD, and various development tools. Proven track record in agile development and cross-functional team collaboration.</p>
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="container">
+                <h1>Om Prakash Peddamadthala</h1>
+                <p class="tagline">Software Engineer | Java, Spring Boot, Microservices</p>
+                <p class="intro">Experienced in designing and developing robust, scalable systems with a focus on real-time data processing and API development.</p>
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+            </div>
         </section>
 
-        <!-- Education -->
-        <section id="education" class="bg-white rounded-lg shadow-md mb-8 p-4 sm:p-6">
-            <h2 class="text-2xl font-semibold text-indigo-700 mb-4 pb-2 border-b border-gray-200">EDUCATION</h2>
-            <p class="text-lg font-medium">Bachelor of Technology in Computer Science</p>
-            <p class="text-gray-600">St.Mary's Group Of Institutions, Hyderabad | 2014 - 2018</p>
-        </section>
-
-        <!-- Technical Skills -->
-        <section id="skills" class="bg-white rounded-lg shadow-md mb-8 p-4 sm:p-6">
-            <h2 class="text-2xl font-semibold text-indigo-700 mb-6 pb-2 border-b border-gray-200">TECHNICAL SKILLS</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="p-4 rounded-md border border-gray-200">
-                    <h3 class="font-semibold text-gray-700 mb-2 text-lg">Backend</h3>
-                    <p class="text-sm text-gray-600">Java, Spring Boot, Microservices, Hibernate, JPA</p>
-                </div>
-                <div class="p-4 rounded-md border border-gray-200">
-                    <h3 class="font-semibold text-gray-700 mb-2 text-lg">Frontend</h3>
-                    <p class="text-sm text-gray-600">HTML, CSS, JavaScript, React</p>
-                </div>
-                <div class="p-4 rounded-md border border-gray-200">
-                    <h3 class="font-semibold text-gray-700 mb-2 text-lg">Databases</h3>
-                    <p class="text-sm text-gray-600">MySQL, MongoDB, PostgreSQL</p>
-                </div>
-                <div class="p-4 rounded-md border border-gray-200">
-                    <h3 class="font-semibold text-gray-700 mb-2 text-lg">Tools</h3>
-                    <p class="text-sm text-gray-600">Docker, Jenkins, Git, Maven, Gradle, Postman, Swagger</p>
-                </div>
-                <div class="p-4 rounded-md border border-gray-200 md:col-span-2">
-                    <h3 class="font-semibold text-gray-700 mb-2 text-lg">Others</h3>
-                    <p class="text-sm text-gray-600">RESTful Services, Agile/Scrum, CI/CD, JUnit, Log4j</p>
+        <section id="about" class="about-section section-padding">
+            <div class="container">
+                <h2>About Me</h2>
+                <div class="about-content">
+                    <p>Software Engineer with 5+ years of experience in designing and developing robust solutions using Java, Spring Boot, and Microservices. Skilled in building scalable systems, focusing on real-time data processing, API development, and third-party integrations. Proficient in CI/CD pipelines, Docker, Jenkins, SonarQube, and JIRA for system management and quality assurance. Collaborates effectively with cross-functional teams to deliver high-quality solutions aligned with business goals.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Professional Experience -->
-        <section id="experience" class="bg-white rounded-lg shadow-md mb-8 p-4 sm:p-6">
-            <h2 class="text-2xl font-semibold text-indigo-700 mb-4 pb-2 border-b border-gray-200">PROFESSIONAL EXPERIENCE</h2>
+        <section id="experience" class="experience-section section-padding bg-light">
+            <div class="container">
+                <h2>Work Experience</h2>
+                <div class="experience-grid">
+                    <div class="experience-item">
+                        <h3>Software Engineer</h3>
+                        <p class="company">Computer Generated Solutions Pvt Ltd | Hyderabad, Telangana</p>
+                        <p class="date">Aug 2023 - Present</p>
+                        <ul>
+                            <li>Developed Threadvine B2B ecommerce platform, enhancing digital catalog management and real-time inventory tracking using Spring Boot.</li>
+                            <li>Integrated SendGrid API for email management, streamlining communication and tracking email logs.</li>
+                            <li>Implemented order management logic and complex business rules for order placement.</li>
+                            <li>Introduced AOP for user activity tracking, improving system monitoring without codebase changes.</li>
+                            <li>Fixed bugs and developed features based on client needs, ensuring timely delivery.</li>
+                            <li>Collaborated on feature design to enhance performance and user experience.</li>
+                        </ul>
+                    </div>
+                    <div class="experience-item">
+                        <h3>Software Developer</h3>
+                        <p class="company">Platform 3 Technologies Pvt Ltd | Chennai, Tamilnadu</p>
+                        <p class="date">Aug 2022 - July 2023</p>
+                        <ul>
+                            <li>Designed services for data extraction in Archon ETL platform, migrating and archiving data from DB2 to EDB and PostgreSQL.</li>
+                            <li>Integrated OpenText API to automate Excel file uploads, ensuring smooth data transformation and migration.</li>
+                            <li>Collaborated on backend processes to support UI requirements, ensuring seamless data flow.</li>
+                            <li>Prepared product documentation and developed JUnit test cases for robust backend services.</li>
+                            <li>Deployed builds in Linux environments using Docker for reliable deployments.</li>
+                        </ul>
+                    </div>
+                    <div class="experience-item">
+                        <h3>Jr. Java Developer</h3>
+                        <p class="company">Aldrich Research Services Pvt Ltd | Hyderabad, Telangana</p>
+                        <p class="date">Dec 2019 - July 2022</p>
+                        <ul>
+                            <li>Developed web crawlers using JSOUP to extract and parse data, improving data collection efficiency.</li>
+                            <li>Built RESTful web services with Spring Boot for interaction with external systems.</li>
+                            <li>Integrated API responses and parsing for accurate data extraction and presentation.</li>
+                            <li>Managed MySQL and MongoDB databases, optimizing queries for faster retrieval.</li>
+                            <li>Developed POJOs and persistence layers using Hibernate, and contributed to Spring MVC views.</li>
+                            <li>Implemented Log4J for logging and error tracking across systems.</li>
+                            <li>Participated in daily scrum meetings to resolve issues and meet project deadlines.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-            <div class="mb-6">
-                <h3 class="text-xl font-semibold text-indigo-700">Computer Generated Solution Private Limited</h3>
-                <p class="text-md font-medium text-gray-700 mb-1"><strong>Senior Software Developer | Aug 2023 - Present</strong></p>
-                <p class="text-sm text-gray-600 italic mb-1">Project: B2B Ecommerce (Threadvine)</p>
-                <p class="text-gray-700 leading-relaxed mb-2">Modern platform for clothing brands with digital catalog management and analytics. Built with Spring Boot microservices architecture, featuring real-time inventory management and advanced analytics dashboard.</p>
-                <p class="font-semibold text-gray-700 mb-1">Responsibilities:</p>
-                <ul class="list-disc list-inside text-gray-700 leading-relaxed space-y-1">
-                    <li>Leading B2B Ecommerce platform development using Spring Boot and Microservices</li>
-                    <li>Implementing CI/CD pipelines with Docker and Jenkins</li>
-                    <li>Managing development lifecycle and leading sprint planning sessions</li>
+        <section id="skills" class="skills-section section-padding">
+            <div class="container">
+                <h2>Technical Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>Languages</h4>
+                        <ul><li>Java</li><li>Groovy</li><li>SQL</li></ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Frameworks</h4>
+                        <ul><li>Spring</li><li>Spring Boot</li><li>Grails</li><li>Hibernate</li><li>JPA</li></ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Build Tools</h4>
+                        <ul><li>Maven</li><li>Gradle</li></ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>IDE</h4>
+                        <ul><li>IntelliJ IDEA</li><li>Visual Studio Code</li><li>Jasper Studio</li></ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Web Technologies</h4>
+                        <ul><li>HTML</li><li>CSS</li><li>JavaScript</li><li>jQuery</li><li>React (Basics)</li></ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Databases</h4>
+                        <ul><li>MySQL</li><li>PostgreSQL</li></ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>OS</h4>
+                        <ul><li>Windows 11</li><li>Unix</li><li>Linux</li></ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Tools</h4>
+                        <ul><li>AWS</li><li>SonarQube</li><li>Jenkins</li><li>Git</li><li>JIRA</li><li>Docker</li><li>Postman</li><li>Swagger</li></ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects-section section-padding bg-light">
+            <div class="container">
+                <h2>Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-item">
+                        <h3>Event Ticket Booking Platform</h3>
+                        <p>Developed a web application using Spring Boot and PostgreSQL for booking event tickets, featuring user authentication and payment integration.</p>
+                    </div>
+                    <div class="project-item">
+                        <h3>Ecommerce Application</h3>
+                        <p>Built a B2C ecommerce platform with Spring Boot, Hibernate, and PostgreSQL, supporting product catalog and order processing.</p>
+                    </div>
+                    <div class="project-item">
+                        <h3>Blog Application</h3>
+                        <p>Created a blogging platform using Grails and MySQL, enabling users to publish and manage posts with a responsive UI.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="education-section section-padding">
+            <div class="container">
+                <h2>Education</h2>
+                <div class="education-item">
+                    <h3>Bachelor of Computer Science and Engineering</h3>
+                    <p>St. Mary's Group of Institutions, Hyderabad, Telangana</p>
+                    <p>Aug 2014 - July 2018</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section section-padding bg-light">
+            <div class="container">
+                <h2>Contact Me</h2>
+                <p>Feel free to reach out for collaborations or opportunities!</p>
+                <ul class="contact-info">
+                    <li><i class="fas fa-envelope"></i> Email: <a href="mailto:omprakashornold@gmail.com">omprakashornold@gmail.com</a></li>
+                    <li><i class="fas fa-phone"></i> Phone: +91 98481 49507</li>
                 </ul>
-            </div>
-
-            <div class="mb-6 pt-6 border-t border-gray-200">
-                <h3 class="text-xl font-semibold text-indigo-700">Platform 3 Technologies Private Limited</h3>
-                <p class="text-md font-medium text-gray-700 mb-1"><strong>Software Developer | Aug 2022 - July 2023</strong></p>
-                <p class="text-sm text-gray-600 italic mb-1">Project: Archon ETL Tool</p>
-                <p class="text-gray-700 leading-relaxed mb-2">Enterprise data migration and archiving solution for legacy systems. Implemented using Spring Boot and Apache Kafka for high-throughput data processing and transformation.</p>
-                <p class="font-semibold text-gray-700 mb-1">Responsibilities:</p>
-                <ul class="list-disc list-inside text-gray-700 leading-relaxed space-y-1">
-                    <li>Developed ETL and data migration tools for enterprise clients</li>
-                    <li>Implemented data transformation solutions using Spring Boot and Kafka</li>
-                </ul>
-            </div>
-
-            <div class="mb-6 pt-6 border-t border-gray-200">
-                <h3 class="text-xl font-semibold text-indigo-700">Aldrich Research Services Private Limited</h3>
-                <p class="text-md font-medium text-gray-700 mb-1"><strong>Junior Java Developer | Dec 2019 - July 2022</strong></p>
-                <p class="text-sm text-gray-600 italic mb-1">Project: PASE Analytics</p>
-                <p class="text-gray-700 leading-relaxed mb-2">Predictive analytics engine for venture capital investment decisions. Built with Java Spring Boot and machine learning algorithms for investment opportunity analysis.</p>
-                <p class="font-semibold text-gray-700 mb-1">Responsibilities:</p>
-                <ul class="list-disc list-inside text-gray-700 leading-relaxed space-y-1">
-                    <li>Developed analytics software for venture capital decision-making</li>
-                    <li>Implemented web crawlers and API integrations</li>
-                </ul>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/omprakash-peddamadthala/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin fa-2x"></i></a>
+                    <a href="https://github.com/omprakashpeddamadthala" target="_blank" title="GitHub"><i class="fab fa-github fa-2x"></i></a>
+                </div>
             </div>
         </section>
+    </main>
 
-        <!-- Footer (Optional, can be added later if needed) -->
-        <footer class="text-center text-sm text-gray-500 py-4 mt-8">
-            <p>&copy; 2024 Om Prakash Peddamadthala</p>
-        </footer>
-    </div>
+    <footer class="footer bg-dark">
+        <div class="container">
+            <p>&copy; <span id="current-year"></span> Om Prakash Peddamadthala. All Rights Reserved.</p>
+            <div class="footer-links">
+                 <a href="https://www.linkedin.com/in/omprakash-peddamadthala/" target="_blank">LinkedIn</a>
+                 <a href="https://github.com/omprakashpeddamadthala" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
